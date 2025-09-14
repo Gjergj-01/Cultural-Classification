@@ -42,7 +42,7 @@ where:
 **Adding more informations to the original dataset**  
 Before training any model I decided to enrich the original dataset, using two different approaches. First I expoited the wikidata knowledge-graph structure, identifying a set of relevant properties (29 in total) that could serve for the task and for each item, retrieved the corresponding values using SPARQL.
 
-The second step was to retrieve statistical information (length, number of languages, etc.) form the wikipedia pages of each item. (thanks to [Alessandro](https://github.com/ErFonchio))
+The second step was to retrieve statistical information (length, number of languages, etc.) fromm the wikipedia pages of each item (thanks to [Alessandro](https://github.com/ErFonchio)).
 
 #### Model
 
@@ -64,3 +64,11 @@ All these were trained separately to perform the classification task, and then "
 Then, I combined all these feature embeddings to train the last **MLP**.
 
 <img src="images/final_model.png" alt="Integrated model" width="600"/>
+
+
+**[NOTE]**: Didn't appload the original dataset (you can find it [here](https://huggingface.co/datasets/sapienzanlp/nlp2025_hw1_cultural_dataset?authuser=0)), and I also didn't appload RoBERTa fine-tuned, (so you'll need to run the training script). 
+
+
+#### TODO
+
+Inference on the test set.
